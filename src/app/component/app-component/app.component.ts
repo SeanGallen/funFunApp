@@ -27,7 +27,7 @@ export class AppComponent {
     });
   }
   returnImage() {
-   // this.image = `<img src={{this.imageOfLaunch}}>`;
-    this.image = '<img src="https://farm1.staticflickr.com/856/28684550147_49802752b3_o.jpg">';
+   // this.image = `<img width="400" height="400" src={{this.imageOfLaunch}}>`;
+    this.image = '<img width="400" height="400" src="https://farm1.staticflickr.com/856/28684550147_49802752b3_o.jpg">';
   }
 }
