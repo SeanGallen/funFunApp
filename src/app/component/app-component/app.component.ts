@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { ObtainImagesService } from './../../service/obtain-images.service';
+import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +10,24 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'funFunApp';
+  js : void = this.get();
+  jsonReturn : string;
+  imageOfLaunch;
+  image;
+
+  constructor(private imageService : ObtainImagesService) {}
+
+  get(){
+    this.imageService.getAnImage().subscribe((c) => {
+      console.log(c)
+      this.jsonReturn = c.mission_name;
+      console.log(c.links.flickr_images[0]);
+      this.imageOfLaunch = c.links.flickr_images[0];
+      this.returnImage();
+    });
+  }
+  returnImage() {
+   // this.image = `<img src={{this.imageOfLaunch}}>`;
+    this.image = '<img src="https://farm1.staticflickr.com/856/28684550147_49802752b3_o.jpg">';
+  }
 }

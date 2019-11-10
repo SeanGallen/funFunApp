@@ -15,6 +15,7 @@ describe('ObtainImagesService', () => {
     service =  TestBed.get(ObtainImagesService);
     httpTestingController = TestBed.get(HttpTestingController);
   });
+  
   afterEach(() => {
     httpTestingController.verify();
   });
