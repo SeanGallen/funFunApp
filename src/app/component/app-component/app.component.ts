@@ -12,7 +12,6 @@ export class AppComponent {
   title = 'funFunApp';
   js : void = this.get();
   jsonReturn : string;
-  imageOfLaunch;
   image;
 
   constructor(private imageService : ObtainImagesService) {}
@@ -22,8 +21,7 @@ export class AppComponent {
       console.log(c)
       this.jsonReturn = c.mission_name;
       console.log(c.links.flickr_images[0]);
-      this.imageOfLaunch = c.links.flickr_images[0];
-      this.image = `<img width="400" height="400" src=${this.imageOfLaunch}>`;
+      this.image = `<img width="400" height="400" src=${c.links.flickr_images[0]}>`;
     });
   }
  
