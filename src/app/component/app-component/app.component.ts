@@ -23,10 +23,8 @@ export class AppComponent {
       this.jsonReturn = c.mission_name;
       console.log(c.links.flickr_images[0]);
       this.imageOfLaunch = c.links.flickr_images[0];
-      this.returnImage();
+      this.image = `<img width="400" height="400" src=${this.imageOfLaunch}>`;
     });
   }
-  returnImage() {
-    this.image = `<img width="400" height="400" src=${this.imageOfLaunch}>`;
-  }
+ 
 }
