@@ -1,8 +1,12 @@
-<div id="test">
-  <h1>{{jsonReturn}}</h1>
-</div>
-<input #launch
-      (keyup.enter)="pickLaunchNumber(launch.value)">
+<div id='center'>
+  <div id="titleCard">
+    <div id="center">
+      <h1>{{jsonReturn}}</h1>
+    <input #launch
+          (keyup.enter)="pickLaunchNumber(launch.value)">
 
-    <button (click)="pickLaunchNumber(launch.value)">Add</button>
-<div [innerHTML]="image" ></div>
+        <button (click)="pickLaunchNumber(launch.value)">Add</button>
+    </div>
+  </div>
+  <div [innerHTML]="image" ></div>
+</div>
