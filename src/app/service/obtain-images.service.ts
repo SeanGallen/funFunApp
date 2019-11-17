@@ -6,12 +6,15 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ObtainImagesService {
-  launchNumber : Number = 42;
+  launchNumber : string = '42';
   constructor(private http: HttpClient) { }
-  updateLaunchNumber(inputNumber: Number): void {
+
+  updateLaunchNumber(inputNumber: string): void {
     this.launchNumber = inputNumber;
   }
+  
   getAnImage(): Observable<any> {
+    console.log(this.launchNumber);
     return this.http.get(`https://api.spacexdata.com/v3/launches/${this.launchNumber}`);
   }
 
